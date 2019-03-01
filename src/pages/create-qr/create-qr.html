@@ -1,0 +1,31 @@
+<!--
+  Generated template for the CreateQrPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>CreateQr</ion-title>
+  </ion-navbar>
+
+</ion-header>
+ 
+
+<ion-content padding>
+    <ion-item>
+        <ion-input type="text" placeholder="MY QR data" [(ngModel)]="qrData">
+        </ion-input>
+      </ion-item>
+  <button ion-button block outline icon-left  (click)="createCode()"><ion-icon name="barcode"></ion-icon>QR generate</button>
+
+  <ion-card *ngIf="createdCode">
+    <ngx-qrcode [qrc-value]="createdCode"></ngx-qrcode>
+    <ion-card-content>
+      <p>Value: {{ createdCode }}</p>
+      <button ion-button (tap)='share()'>share()</button>
+    </ion-card-content> 
+  </ion-card>  
+</ion-content>
+

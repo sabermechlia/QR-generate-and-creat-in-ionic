@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>historique</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding >
+  <div  *ngIf=tab>
+      <ion-list *ngFor="let resultat of tab">
+          <ion-item>
+            <h2>{{resultat.datehisto}}</h2>
+            <p>{{resultat.text}}</p>
+          </ion-item>
+      </ion-list>
+  </div>
+
+</ion-content>
