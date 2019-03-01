@@ -1,4 +1,4 @@
-import { QrscannerPage } from './../qrscanner/qrscanner';
+
 import { AndroidPermissions } from '@ionic-native/android-permissions';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -18,7 +18,7 @@ export class ReadQrPage {
     public qrScanner: QRScanner) {
   }
   push() {
-    this.navCtrl.push(QrscannerPage);
+    this.navCtrl.push('QrscannerPage');
   }
 
   qrscanner() {

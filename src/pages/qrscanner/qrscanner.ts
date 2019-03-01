@@ -15,9 +15,12 @@ export class QrscannerPage {
               public androidPermissions: AndroidPermissions,
               public qrScanner: QRScanner) {
 
+    
+  }
+  ionViewDidEnter(){
+
     this.qrscanner();
   }
-
   qrscanner() {
 
     // Optionally request the permission early
